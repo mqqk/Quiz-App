@@ -6,12 +6,97 @@
   }
   
   body {
-    font-family: 'Gaegu', cursive;
+    font-family: 'Papyrus';
     text-transform: uppercase;
-    color: #371d0d;
+    color: #000000;
     background-color: rgb(187,154,235);
   }
   
+
+  /* header designs */
+
   .header {
     text-align: center;
+    padding:50px 0;
+  }
+
+  .header ul{
+    padding:7px 0;
+  }
+  .header ul li{
+    padding:7px 0;
+  }
+
+  .logoRL {
+    width:400px;
+  }
+
+  /* design the quiz box here */
+    /* lets start with the backdrop of box */
+
+  .quizBox{
+    display:flex;
+    flex-direction:column;
+    background-image:url(../images/progressrank.jpg);
+    margin-top:7px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:7px;
+    border:1px rgb(20, 1, 20);
+    text-align: center;
+    color:#000;
+  }
+
+  .box{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    margin:0 250px 50px 250px;
+    /* margin:auto; */
+    padding:7px;
+    border:1px rgb(187,154,235);
+    background-color:rgb(163, 74, 190);
+  
+  }
+
+  .box img{
+    width:50%;
+    padding:10px 0;
+
+  }
+
+  /* start button  */
+  .sButton{
+    border-radius: 10px;
+    color:#fff;
+    width:100px;
+    height:34px;
+    cursor:pointer;
+    font-family:Papyrus;
+    border:2px rgb(248, 248, 248);
+    background-color:rgb(34, 2, 44);
+    font-size:24px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+  /* diff media */
+
+  @media only screen and (min-width: 800px) {  
+   
+    .quizBox{
+      width: 80em;
+      height: 45em;
+    }
   }
