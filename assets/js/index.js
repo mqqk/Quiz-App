@@ -28,7 +28,7 @@ const STORE=[
     correctAnswer: '7-1'
   },
   {
-    question: 'Which game mechnic provides a quick boost even when players do not have boost?'
+    question: 'Which game mechnic provides a quick boost even when players do not have boost?',
     answers: [
       'Wave Dash',
       'Wave Boost',
@@ -203,6 +203,7 @@ let questionNumber=0;
           $('.altBox').hide();
           $('.submission').show();
           let choice=$('input:checked');
+            console.log(choice);
           let answer=choice.val();
           let correct=STORE[questionNumber].correctAnswer;
           if(answer===correct){
