@@ -6,102 +6,102 @@ const STORE=[
 },
 {
     question:
-      'What makes the female spider monkey different from all other primates?',
+      'What is the name of the professional series held for Rocket League each year?',
     answers: [
-      'She has the meanest dance moves, often being cited as the inspiration to such dancers as Michael Jackson, Shakira, and even Justin Timberlake',
-      'She has the longest tail, reaching up to three feet in length',
-      'She has seven (and sometimes even eight) different colors on her face',
-      'She eats the second born baby when she gives birth to twins'
-    ],
+      'Rocket League Champions Series',
+      'Rocket League Championship Series',
+      'Rocket League Champs Series',
+      'League of Rockets Champs Series',
+            ],
     correctAnswer:
-      'She has the longest tail, reaching up to three feet in length'
+      'Rocket League Championship Series'
   },
   {
     question:
-      'Out of all the New World monkeys, the owl monkey is the only one to:',
+      'What score needs to be achieved at least once in a game to achieve "BRA71L"?',
     answers: [
-      'Stay up all night, having a nocturnal sleep schedule',
-      'Consistently hoot as a mating call',
-      'Have the ability to turn its head all the way around',
-      'Throw the wildest and loudest parties'
+      '5-0',
+      '7-0',
+      '7-1',
+      '10-0'
     ],
-    correctAnswer: 'Stay up all night, having a nocturnal sleep schedule'
+    correctAnswer: '7-1'
   },
   {
-    question: 'Which New World monkey is the most intelligent?',
+    question: 'Which game mechnic provides a quick boost even when players do not have boost?'
     answers: [
-      'The tamarin monkey',
-      'The brass monkey (that funky monkey)',
-      'The baboon monkey',
-      'The capuchin monkey'
+      'Wave Dash',
+      'Wave Boost',
+      'Boost Dash',
+      'Jump Boost'
     ],
-    correctAnswer: 'The capuchin monkey'
-  },
-  {
-    question:
-      'Picking out parasites and dirts from each others’ furs is a way for monkeys to:',
-    answers: [
-      'Show honor to their elders, respect for alpha males, and to prepare for the heat of summer',
-      'Get rid of bugs and dirt cause all that stuff is yucky!',
-      'Communicate, form social hierarchies, and strengthen family and friendship bonds',
-      'Find a quick source of sustenance and show interest in mating'
-    ],
-    correctAnswer:
-      'Communicate, form social hierarchies, and strengthen family and friendship bonds'
-  },
-  {
-    question: 'The pygmy marmoset is:',
-    answers: [
-      'The world’s fastest monkey',
-      'The world’s smallest monkey',
-      'The galaxy’s most fashionable living being. Period.',
-      'Allergic to bananas'
-    ],
-    correctAnswer: 'The world’s smallest monkey'
+    correctAnswer: 'Wave Dash'
   },
   {
     question:
-      'What is a prominent difference between Old and New World monkeys?',
+      'How many seconds are there between power-ups in Rumble mode?',
     answers: [
-      'New World monkeys build houses out of mud — Old World monkeys live in caves',
-      'New World monkeys gonna’ love you long time — Old World monkeys would do anything for love (but they won’t do that…)',
-      'New World monkeys have backward, non opposable thumbs — Old World monkeys have two opposable thumbs on each hand and foot',
-      'New World monkeys have 36 teeth — Old World monkeys have 32 teeth'
+      '7',
+      '5',
+      '10',
+      '8'
     ],
     correctAnswer:
-      'New World monkeys have 36 teeth — Old World monkeys have 32 teeth'
+      '10'
   },
   {
-    question: 'The male howler monkey:',
+    question: 'Which game mode is by default designed for only 2 players?',
     answers: [
-      'Is the strongest New World monkey and can lift up to ten times his own weight',
-      'Has the loudest call of any primate and is one of the loudest animals in the world',
-      'Sleeps in the blood of its enemies',
-      'Has the most beautiful singing voice that one might never hear'
+      'Snow Day',
+      'Hoops',
+      'Rumble',
+      'Drop-Shot'
     ],
-    correctAnswer:
-      'Has the loudest call of any primate and is one of the loudest animals in the world'
-  },
-  {
-    question: 'What type of environments do New World monkeys live in?',
-    answers: [
-      'Mountain caves',
-      'Country farmlands',
-      'Tropical forests',
-      'Bustling cities'
-    ],
-    correctAnswer: 'Tropical forests'
+    correctAnswer: 'Hoops'
   },
   {
     question:
-      'How do squirrel monkeys mark their path when they are moving through the treetops?',
+      'What end of match superlative is given to a player that won but lacked any contribution to the team? ',
     answers: [
-      'They tie a spool of thread to the first tree they climb and let it unravel as they go',
-      'They spread urine on their hands and feet',
-      'They drop pieces of candy after every couple of yards',
-      'They record their travel path using GPS location through a “running app” on their cell phones'
+      'Second String',
+      'Do you even Rocket League?',
+      'Might be a Bot',
+      'Bench Warmer'
     ],
-    correctAnswer: 'They spread urine on their hands and feet'
+    correctAnswer:
+      'Bench Warmer'
+  },
+  {
+    question: 'Which Rocket League Arena features Roman architecture and an Italian village as a backdrop?',
+    answers: [
+      'Utopia Coliseum',
+      'Manfield',
+      'DFH Stadium',
+      'Urban Central'
+    ],
+    correctAnswer:
+      'Utopia Coliseum'
+  },
+  {
+    question: 'What was the name of the prequel to Rocket League?',
+    answers: [
+      'Super Acrobatic Rocket Battle-Cars',
+      'Super Boosted Rocket Cars',
+      'Super Aerial Rocket-Propelled Battle-Cars',
+      'Supersonic Acrobatic Rocket-Powered Battle-Cars'
+    ],
+    correctAnswer: 'Supersonic Acrobatic Rocket-Powered Battle-Cars'
+  },
+  {
+    question:
+      'Which RLCS player has the most championship rings?',
+    answers: [
+      'Fairy Peak',
+      'Squishy Muffins',
+      'Turbopolsa',
+      'Violent Panda'
+    ],
+    correctAnswer: 'Turbopolsa'
   }
 ];
 
