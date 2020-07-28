@@ -7,7 +7,6 @@
   
   body {
     font-family: 'Papyrus';
-    text-transform: uppercase;
     color: #000000;
     background-color: rgb(187,154,235);
   }
@@ -20,11 +19,11 @@
     padding:50px 0;
   }
 
-  .header ul{
-    padding:7px 0;
+  ul{
+    padding:.25em 0;
   }
-  .header ul li{
-    padding:7px 0;
+  ul li{
+    padding:.25em 0;
   }
 
   .logoRL {
@@ -35,17 +34,16 @@
     /* lets start with the backdrop of box */
 
   .quizBox{
-    display:flex;
-    flex-direction:column;
-    background-image:url(../images/progressrank.jpg);
-    margin-top:7px;
-    margin-left:auto;
-    margin-right:auto;
-    margin-bottom:7px;
-    border:1px rgb(20, 1, 20);
-    text-align: center;
-    color:#000;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3em;
+  background-image: url(../images/progressrank.jpg);
+  border: 0.1em #371d0d solid;
+}
 
   .box{
 
@@ -53,8 +51,8 @@
     flex-direction:column;
     align-items:center;
     justify-content:center;
-    text-align:center;
-    margin:0 250px 50px 250px;
+    /* text-align:center; */
+    margin:2em 10em 5em 10em;
     /* margin:auto; */
     padding:7px;
     border:1px rgb(187,154,235);
@@ -68,8 +66,9 @@
 
   }
 
-  /* start button  */
+  /* button button  */
   .sButton{
+    margin:.5em 0;
     border-radius: 10px;
     color:#fff;
     width:100px;
@@ -81,6 +80,12 @@
     font-size:24px;
   }
 
+/* question box style */
+.answerStyle{
+    display:flex;
+    flex-direction:row;
+    padding-top:1em;
+}
 
 
 
