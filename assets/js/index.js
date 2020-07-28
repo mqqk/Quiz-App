@@ -115,7 +115,7 @@ let questionNumber=0;
       $('.altBox').hide();
 
       $('.start').on('click','.begin',function(event){
-          console.log('did you start?')
+          //console.log('did you start?')
           $('.start').hide();
           $('.questionNumber').text(1);//note, this does not change the JS let questionNumber=0, it changes the HTML text
           $('.questionBox').show();
@@ -260,7 +260,7 @@ let questionNumber=0;
 
         function restartQuiz() {
             $('.quizBox').on('click', '.restartButton', function (event) {
-                console.log('are we restarting?')
+                //console.log('are we restarting?')
               event.preventDefault();
               resetStats();
               $('.altBox').hide();
