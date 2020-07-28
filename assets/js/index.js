@@ -6,7 +6,7 @@ const STORE=[
 },
 {
     question:
-      'What is the name of the professional series held for Rocket League each year?',
+      'What is the name of the professional series held for Rocket League each season?',
     answers: [
       'Rocket League Champions Series',
       'Rocket League Championship Series',
@@ -28,7 +28,7 @@ const STORE=[
     correctAnswer: '7-1'
   },
   {
-    question: 'Which game mechnic provides a quick boost even when players do not have boost?',
+    question: 'Which game mechanic provides a quick boost?',
     answers: [
       'Wave Dash',
       'Wave Boost',
@@ -61,7 +61,7 @@ const STORE=[
   },
   {
     question:
-      'What end of match superlative is given to a player that won but lacked any contribution to the team? ',
+      'What end of match superlative is given to a player that won but lacked any measurable contribution to the team? ',
     answers: [
       'Second String',
       'Do you even Rocket League?',
