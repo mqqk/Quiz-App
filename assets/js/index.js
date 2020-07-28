@@ -141,21 +141,21 @@ let questionNumber=0;
        
        const pro=[
            'Best of the Best',
-           'images/win.jpg',
+           '../assets/images/rank/champ%203.jpg',
            'RLCS or Grand Champ Image',
            'Congrats on being a Rocket League Pro'
        ];
 
        const good=[
            "You're getting there!",
-           'images/win.jpg',
+           '../assets/images/rank/diam%201.jpg',
            'Plat to Diamond Image',
            'Keep grindin' 
        ];
 
        const notBot=[
            'You gave it a valiant effort!',
-           'imgages/lose.jpg',
+           '../assets/images/rank/silver.jpg',
            'bot level image',
            'No one was a pro over night'
        ];
@@ -186,13 +186,18 @@ let questionNumber=0;
         let fieldSelector = $(formMaker).find('fieldset');
       
         STORE[questionIndex].answers.forEach(function (answerValue, answerIndex) {
-          $(`<label class="sizeMe" for="${answerIndex}">
+          $(`<label class="answerStyle" for="${answerIndex}">
               <input class="radio" type="radio" id="${answerIndex}" value="${answerValue}" name="answer" required>
               <span>${answerValue}</span>
             </label>
             `).appendTo(fieldSelector);
         });
-        $(`<button type="submit" class="sButton button"> Submit</button > `).appendTo(fieldSelector);
+        $(`<button type="submit" class="sButton button"> Submit</button >
+                    <div>
+                <ul>
+                    <li>Question:<span class=$questionNumber}>${questionNumber+1}</span>/10</li>
+                    <li>Score:<span class="points">${points}</span></li>
+                </ul> `).appendTo(fieldSelector);
         return formMaker;
       }
 
@@ -203,7 +208,7 @@ let questionNumber=0;
           $('.altBox').hide();
           $('.submission').show();
           let choice=$('input:checked');
-            console.log(choice);
+            //console.log(choice);
           let answer=choice.val();
           let correct=STORE[questionNumber].correctAnswer;
           if(answer===correct){
@@ -215,7 +220,7 @@ let questionNumber=0;
     function correctChoice(){
         $('.submission').html(
             `<h3>Nice Shot!</h3>
-            <img src="#" class="correctImg" alt="goal score image"/>
+            <img src="../assets/images/partytime.jpg" class="correctImg" alt="goal score image"/>
             <p>Games not over, don't let them comeback!</p>
             <button type="button" class="nextButton sButton">Next</button>`
         );
@@ -225,7 +230,9 @@ let questionNumber=0;
     function incorrectChoice() {
         $('.submission').html(
         `<h3>Big OOF! Nice WHIFF XD!</h3>
-        <img src="#" class="correctImg" alt="big oof"/>
+        <img src="../assets/images/jesterbot.png" alt="big oof"/>
+        <p>The correct answer is ${STORE[questionNumber].correctAnswer}!</p>
+        <br>
         <p>There might still be time to comeback, let's go!</p>
         <button type="button" class="nextButton sButton">Next</button>`
         )}
