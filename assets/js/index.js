@@ -10,8 +10,7 @@ let questionNumber=0;
         console.log("startQuiz initiated");//works
       //$('.altBox').hide();
 
-      $('#start').on('click',function(event){
-          //console.log('did you start?')
+      $('.start').on('click',function(event){
           //$('.start').hide();
           $('.questionNumber').text(1);//note, this does not change the JS let questionNumber=0, it changes the HTML text
           //$('.questionBox').show();
@@ -26,9 +25,10 @@ let questionNumber=0;
     //otherwise, hide current inner box and run finalScore()
     function getQuestion(){
       
-        if(questionNumber<STORE.length)
+        if(questionNumber<STORE.length){
+        $('.questionNumber').text(questionNumber+1);
         
-        {return renderQuestionHTML(questionNumber) }
+        return renderQuestionHTML(questionNumber) }
         else{
 
             finalScore();
@@ -39,9 +39,9 @@ let questionNumber=0;
     //make a form that pulls the question first from the STORE
     //
     function renderQuestionHTML(questionNumber){
-      //console.log(questionNumber);
+      console.log(questionNumber);
       let question=STORE[questionNumber].question;
-      //console.log(question);
+      console.log(question);
     
       const questionHTML=(
     `<div class="box">
@@ -86,8 +86,7 @@ let questionNumber=0;
     //the next function above is the submitAnswer which should listen for the click form the createThing(), it listens on the main box, hides the box, and shows a submission
     //now compare the input:checked from the radio button to the actual correct answer, if it's correct, send us to another function correctChoice(), else go to incorrectChoice()
     function submitAnswer(){
-        $('body').on('submit',function(event){
-          
+        $('body').on('submit',function(event){       
           console.log("are we making it to submitAnswer?");
           console.log(STORE[questionNumber].correctAnswer);
           event.preventDefault();
@@ -149,7 +148,7 @@ let questionNumber=0;
 
         function updateQuestion(){            
             questionNumber++;
-            $('.questionNumber').text(questionNumber+1);  
+              
         }
 
 
@@ -166,14 +165,14 @@ let questionNumber=0;
        
        const pro=[
            'Best of the Best',
-           'assets/images/rank/champ-3.jpg',
+           'assets/images/rank/champ3.jpg',
            'RLCS or Grand Champ Image',
            'Congrats on being a Rocket League Pro'
        ];
 
        const good=[
            "You're getting there!",
-           'assets/images/rank/diam-1.jpg',
+           'assets/images/rank/diam1.jpg',
            'Plat to Diamond Image',
            'Keep grindin' 
        ];
@@ -192,7 +191,7 @@ let questionNumber=0;
        }else {array=notBot;}
         //return the end box with the html that populates the appropriate array and provide a button to restart
        return $('#main').html(
-        `<div class="box">
+        `<div class="start box">
         <h3>${array[0]}</h3>
           <img src="${array[1]}" alt="${array[2]}" class="images">
             <h3>Your score is ${points} / 10</h3>
@@ -220,8 +219,8 @@ return restartHTML;
           console.log('are we restarting?')
         event.preventDefault();
         resetStats();
-        $('#main').html(restartHTML());
-        $(createQuiz);
+        restartHTML();
+        location.reload();
       });
     }
 
