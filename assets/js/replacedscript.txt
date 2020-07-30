@@ -1,0 +1,38 @@
+original function
+
+    function createQuestion(questionIndex) {
+      // console.log(questionIndex);//marker for which array is being used, starts at 0
+      //console.log(answer)
+      
+        let formMaker = $(`<form>
+          <fieldset>
+            <legend>${STORE[questionIndex].question}</legend>
+          </fieldset>
+        </form>`)
+        
+        //create a variable to represent the area in the form to next add the muliple choice
+        //let fieldSelector = $(formMaker).find('fieldset');
+      
+        //identify the list of answers and for each, produce a nameless label with each, create a radio input beside each answer for the uder to select
+        //and then add the answer to the end of the input to identify that radio button. 
+        STORE[questionIndex].answers.forEach(function (answerValue, answerIndex) {
+          $(`<label class="answerStyle" for="${answerIndex}">
+              <input type="radio" id="${answerIndex}" value="${answerValue}" name="answer" required>
+              <span>${answerValue}</span>
+            </label>
+            `).appendTo($(formMaker).find('fieldset'));//append this to the fieldset from above
+        });
+        
+        //create a button to click after making a choice within the radio buttons above
+        $(`<button type="submit" class="sButton button"> Submit</button >
+                    <div>
+                <ul>
+                    <li>Question:<span class=$questionNumber}>${questionNumber+1}</span>/10</li>
+                    <li>Score:<span class="points">${points}</span></li>
+                </ul> `).appendTo($(formMaker).find('fieldset'));//added this at the bottom to better see the progress of the questions and score as you go
+        return formMaker;//return this form which will add the html required to the DOM
+      }
+
+            <section class="questionBox box altBox"> </section>
+            <section class="submission box altBox"></section>
+            <section class="end box altBox"></section>

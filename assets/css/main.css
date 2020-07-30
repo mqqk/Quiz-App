@@ -16,7 +16,11 @@
 
   .header {
     text-align: center;
-    padding:50px 0;
+    padding:20px 0;
+  }
+
+  .header img{
+    width:20em;
   }
 
   ul{
@@ -61,7 +65,7 @@
   }
 
   .box img{
-    width:50%;
+    width:20em;
     padding:10px 0;
 
   }
@@ -87,6 +91,9 @@
     padding-top:1em;
 }
 
+.submissionImg{
+  width:50em;
+}
 
 
 
