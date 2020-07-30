@@ -7,16 +7,23 @@
   
   body {
     font-family: 'Papyrus';
-    color: #000000;
-    background-color: rgb(187,154,235);
+    font-size: 20px;
+    font-weight: 400;
+    color: #C8F7C5;
+    background-color: rgb(14, 2, 32);
   }
   
 
   /* header designs */
 
+  h1{
+    font-size:24px;
+    margin-bottom:.5em;
+  }
+
   .header {
     text-align: center;
-    padding:20px 0;
+    padding-top:.5em;
   }
 
   .header img{
@@ -46,17 +53,20 @@
   margin-right: auto;
   margin-bottom: 3em;
   background-image: url(../images/progressrank.jpg);
-  border: 0.1em #371d0d solid;
+  border: 0.1em rgb(187,154,235) solid;
 }
 
   .box{
 
     display:flex;
     flex-direction:column;
+    width:auto;
+    height:auto;
     align-items:center;
     justify-content:center;
+    color:#C8F7C5;
     /* text-align:center; */
-    margin:2em 10em 5em 10em;
+    margin:.5em 10em 5em 10em;
     /* margin:auto; */
     padding:7px;
     border:1px rgb(187,154,235);
@@ -72,7 +82,7 @@
 
   /* button button  */
   .sButton{
-    margin:.5em 0;
+    margin:.5em 5em;
     border-radius: 10px;
     color:#fff;
     width:100px;
@@ -91,8 +101,8 @@
     padding-top:1em;
 }
 
-.submissionImg{
-  width:50em;
+#submissionImg{
+  width:70em;
 }
 
 
