@@ -7,14 +7,13 @@ let questionNumber=0;
 //create a ready function that will first start the page
 
     function startQuiz(){//listens for a click on Start on the main page 
-        console.log("startQuiz initiated");//works
-      //$('.altBox').hide();
+       //console.log("startQuiz initiated");//works
 
-      $('.start').on('click',function(event){
-          //$('.start').hide();
+      $('#start').on('click',function(event){
+          $('.start').hide();//i needed to hide this div in order to use the start button again on restartQuiz();
+          $('#js-body').show();//i created this in order render in the html for each question/submission/results
           $('.questionNumber').text(1);//note, this does not change the JS let questionNumber=0, it changes the HTML text
-          //$('.questionBox').show();
-          //$('.questionBox').prepend(getQuestion());//initialize getQuestion()
+
           getQuestion();
           
       });
@@ -39,9 +38,9 @@ let questionNumber=0;
     //make a form that pulls the question first from the STORE
     //
     function renderQuestionHTML(questionNumber){
-      console.log(questionNumber);
+      //console.log(questionNumber);
       let question=STORE[questionNumber].question;
-      console.log(question);
+      //console.log(question);
     
       const questionHTML=(
     `<div class="box">
@@ -62,7 +61,7 @@ let questionNumber=0;
       </form>
     </div>`);
     
-    $("#main").html(questionHTML);
+    $("#js-body").html(questionHTML);
     renderAnswerChoicesHTML();
     
     
@@ -76,9 +75,9 @@ let questionNumber=0;
         $(".js-answers").append(`<label class="answerStyle" for="${i}">
           <input type="radio" id="${i}" value="${choices[i]}" name="answer" required>
           <span>${choices[i]}</span>
-          </label>`)
+          </label>`)//appends each choice into the the <div> #js-answers
      }
-    console.log($('input[name=answer]:checked'));
+    //console.log($('input[name=answer]:checked'));
     }
 
 
@@ -87,14 +86,11 @@ let questionNumber=0;
     //now compare the input:checked from the radio button to the actual correct answer, if it's correct, send us to another function correctChoice(), else go to incorrectChoice()
     function submitAnswer(){
         $('body').on('submit',function(event){       
-          console.log("are we making it to submitAnswer?");
-          console.log(STORE[questionNumber].correctAnswer);
+          //console.log("are we making it to submitAnswer?");
+          //console.log(STORE[questionNumber].correctAnswer);
           event.preventDefault();
-          //$('.altBox').hide();
-          //$('.submission').show();
           let choice=$('input[name=answer]:checked').val();
-            console.log(choice);
-         // let answer=choice;
+            //console.log(choice);
           let correct=STORE[questionNumber].correctAnswer;
           if(choice===correct){
               correctChoice();
@@ -104,7 +100,7 @@ let questionNumber=0;
 
     //correct choice shows a submission to the DOM of an html telling the user they chose correctly with an image provide a button to click to move on and run updatePoints()
     function correctChoice(){
-        $('#main').html(
+        $('#js-body').html(
             `<div class="box">
             <h3>Nice Shot!</h3>
             <img class="submissionImg" src="assets/images/partytime.jpg" class="correctImg" alt="goal score image"/>
@@ -122,7 +118,7 @@ let questionNumber=0;
         
         //show submission to have the following html for incorrect guess, with picture, and pull from the STORE the correct answer and make a button to click
         function incorrectChoice() {
-        $('#main').html(
+        $('#js-body').html(
         `<div class="box"
         <h3>Big OOF! Nice WHIFF XD!</h3>
         <img class="submissionImg" src="assets/images/jesterbot.png" alt="big oof"/>
@@ -137,8 +133,6 @@ let questionNumber=0;
         //so that getQuestion will find the correct question
         function nextQuestion() {
             $('.quizBox').on('click','.nextButton', function (event) {
-            //$('.altBox').hide();
-            //$('.questionBox').show();
             updateQuestion();
             //console.log(questionNumber);
             //take questionBox form and replace it with (run getQuestion()) and this will give new form
@@ -190,7 +184,7 @@ let questionNumber=0;
            array=good;
        }else {array=notBot;}
         //return the end box with the html that populates the appropriate array and provide a button to restart
-       return $('#main').html(
+       return $('#js-body').html(
         `<div class="start box">
         <h3>${array[0]}</h3>
           <img src="${array[1]}" alt="${array[2]}" class="images">
@@ -202,25 +196,15 @@ let questionNumber=0;
 
     }
 
-    function restartHTML(){
-      const restartHTML=(`
-      <div class="start box">
-      <h2>So you think you're a champ Rocket League wiz? Click Start to find out.</h2>
-      <img src="assets/images/RLball.jpg" alt="RL Ball"/>
-      <br>
-      <button type="submit" id="start" class="sButton begin">Start</button>
-  </div>
-`)
-return restartHTML;
-    }
+    
 
     function restartQuiz() {
       $('.quizBox').on('click','.restartButton', function (event) {
           console.log('are we restarting?')
         event.preventDefault();
         resetStats();
-        restartHTML();
-        location.reload();
+        $('.start').show();
+        $("#js-body").hide();
       });
     }
 
@@ -236,7 +220,7 @@ return restartHTML;
 
 
           function createQuiz(){//this will start the functions below in the order which they appears
-            console.log("create quiz started");//works
+           // console.log("create quiz started");//works
         startQuiz();//runs the intro page and hides the rest of the html;
         //getQuestion();//after click, hides the intro html and reveals next html for question
         submitAnswer();//receives answer with click and generates a response for correct or incorrect
