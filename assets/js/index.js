@@ -218,11 +218,9 @@ let questionNumber=0;
     
 
 
-
-          function createQuiz(){//this will start the functions below in the order which they appears
+function createQuiz(){//this will start the functions below in the order which they appears
            // console.log("create quiz started");//works
         startQuiz();//runs the intro page and hides the rest of the html;
-        //getQuestion();//after click, hides the intro html and reveals next html for question
         submitAnswer();//receives answer with click and generates a response for correct or incorrect
         nextQuestion();//gets another question
         restartQuiz();//runs createQuiz() presumably

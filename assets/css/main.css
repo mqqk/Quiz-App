@@ -7,7 +7,7 @@
   
   body {
     font-family: 'Papyrus';
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
     color: #C8F7C5;
     background-color: rgb(14, 2, 32);
@@ -47,6 +47,7 @@
   .quizBox{
   display: flex;
   flex-direction: column;
+  width:100%;
   align-items: center;
   margin-top: 0em;
   margin-left: auto;
@@ -118,7 +119,11 @@
   @media only screen and (min-width: 800px) {  
    
     .quizBox{
-      width: 80em;
+      width: 100%;
       height: 45em;
     }
+  }
+
+  body{
+    font-size:24px;
   }
