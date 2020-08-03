@@ -24,6 +24,7 @@
   .header {
     text-align: center;
     padding-top:.5em;
+    width:100%;
   }
 
   .header img{
