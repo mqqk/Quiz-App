@@ -7,7 +7,7 @@
   
   body {
     font-family: 'Papyrus';
-    font-size: 16px;
+    font-size: 22px;
     font-weight: 400;
     color: #C8F7C5;
     background-color: rgb(14, 2, 32);
@@ -51,7 +51,7 @@
   width:100%;
   align-items: center;
   margin-top: 0em;
-  margin-left: auto;
+  margin-left: center;
   margin-right: auto;
   margin-bottom: 3em;
   background-image: url(../images/progressrank.jpg);
@@ -103,9 +103,7 @@
     padding-top:1em;
 }
 
-#submissionImg{
-  width:70em;
-}
+
 
 
 
@@ -116,15 +114,54 @@
 
 
   /* diff media */
-
-  @media only screen and (min-width: 800px) {  
+  @media only screen and (max-width: 800px) {  
    
     .quizBox{
       width: 100%;
-      height: 45em;
+      height:100%;
     }
-  }
+    
+  
+  
+    .header{
+      padding:0;
+      margin-bottom:1px;
+    }
 
   body{
-    font-size:24px;
+    font-size:2vw;
+       
   }
+
+  .box img{
+    width:10em;
+  }
+
+  .box{
+    font-size:2vw;
+  }
+}
+  
+
+  @media only screen and (max-width: 600px) {  
+   
+    .quizBox{
+      width: 100%;
+      text-align:center;     
+    }
+  
+
+  body{
+    width:100%;
+    font-size:4.5vw;
+    
+  }
+  .box{
+  text-align:center;
+  font-size:4vw;
+  padding-left:30px;
+  padding-right:15px;
+    
+  }
+}
+

@@ -59,7 +59,7 @@ let questionNumber=0;
           </div>
         </fieldset>
       </form>
-    </div>`);
+    </div>`)
     
     $("#js-body").html(questionHTML);
     renderAnswerChoicesHTML();
